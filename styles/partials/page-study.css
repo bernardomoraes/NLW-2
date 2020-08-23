@@ -1,0 +1,206 @@
+#page-study #container {
+  width: 100vw;
+  height: 100vh;
+}
+
+#search-teachers {
+  margin-top: 3.2rem;
+}
+
+#search-teachers label {
+  color: var(--color-text-in-primary);
+}
+
+#search-teachers .select-block {
+  margin-bottom: 1.4rem;
+}
+
+#search-teachers button {
+  width: 100%;
+  height: 5.6rem;
+  background: var(--color-secondary);
+  color: var(--color-button-text);
+  border: 0;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  font: 700 1.6rem Archivo;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background 0.2;
+  margin-top: 3.2rem;
+}
+
+#search-teachers button:hover {
+  background-color: var(--color-secondary-dark);
+}
+
+/* Criando estrutura da Box dos Perfis dos professores */
+#page-study main {
+  margin: 3.2rem auto;
+  width: 90%;
+}
+
+.teacher-item {
+  background-color: var(--color-box-base);
+  border: 1px solid var(--color-line-in-white);
+  border-radius: 0.8rem;
+  margin-top: 2rem;
+}
+
+.teacher-item header {
+  padding: 3.2rem 2rem;
+  display: flex; /* ELe vai colocar um ao lado do outro */
+  align-items: center;
+}
+
+.teacher-item header img {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+}
+
+.teacher-item header div {
+  margin-left: 2rem;
+}
+
+.teacher-item header div strong {
+  font: 700 2.4rem Archivo;
+  display: block; /* Strong recebe por pradão display in line e alteramos para block, para ficar em baixo */
+  color: var(--color-text-title);
+}
+
+.teacher-item header div span {
+  font-size: 1.6rem;
+  display: block;
+  margin-top: 0.4rem; /* Esse margin top so funciona se o display for do tipo block, so for do tipo inline ele não aceita */
+}
+
+.teacher-item > p {
+  padding: 0 2rem;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+}
+
+.teacher-item footer {
+  padding: 3.2rem 2rem;
+  background-color: var(--color-box-footer);
+  border-top: 1px solid var(--color-line-in-white);
+  margin-top: 3.2rem;
+
+  display: flex; /* Vai colocar os itens em linha */
+  align-items: center; /* Vai alinhar eles no eixo x */
+  justify-content: space-between; /* Vai colocar um em cada lado do eixo */
+}
+
+.teacher-item footer p {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  color: var(--color-text-complement);
+}
+
+.teacher-item footer p strong {
+  font-size: 1.6rem;
+  color: var(--color-primary);
+  display: block;
+}
+
+.teacher-item footer button {
+  width: 20rem;
+  height: 5.6rem;
+  background: var(--color-secondary);
+  color: var(--color-button-text);
+  border: 0;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  font: 700 1.4rem Archivo;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly; /* O espaçamento entre os elementos são iguais */
+
+  text-decoration: none;
+  transition: background 0.2;
+  margin-left: 1.6rem;
+}
+
+.teacher-item footer button:hover {
+  background: var(--color-secondary-dark);
+}
+
+@media (min-width: 700px) {
+  #page-study #container {
+    max-width: 100vw;
+  }
+
+  .teacher-item header,
+  .teacher-item footer {
+    padding: 32px;
+  }
+
+  .page-header {
+    height: 340px;
+  }
+  .page-header .top-bar-container {
+    max-width: 1100px;
+  }
+  .page-header .header-content {
+    position: relative;
+    max-width: 740px;
+
+    margin: 0 auto;
+
+    flex: 1 1; /* Propriedade do Flex que faz com que ele ocupe toda a caixa */
+    padding-bottom: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .page-header .header-content strong {
+    max-width: 350px;
+  }
+
+  #search-teachers {
+    display: grid;
+    grid-template-columns: repeat(
+      4,
+      1fr
+    ); /* Solução para não ter que fazer 1fr 1fr 1fr 1fr  */
+
+    gap: 16px;
+    position: absolute;
+    bottom: -28px;
+  }
+  #page-study main {
+    padding: 32px 0; /* Da a separação entre a lista de proffs e a select */
+    max-width: 740px; /* Largura máxima */
+    margin: 0 auto;
+  }
+
+  #search-teachers .select-block {
+    margin-bottom: 0;
+  }
+
+  .teacher-item > p {
+    /* Essa setinha faz com que o css pegue apenas o primeiro nível para realizar as mudanças */
+    padding: 0 32px;
+  }
+
+  .teacher-item footer p strong {
+    display: initial;
+    margin-left: 16px;
+  }
+
+  .teacher-item footer button {
+    width: 245px;
+    font-size: 16px;
+    justify-content: center;
+    /* Aqui retira a condição de evenly setada anteriormente e seta agora para center, dessa forma a imagem do wpp e o nome ficam juntas no centro */
+  }
+
+  .teacher-item footer button img {
+    margin-right: 16px;
+  }
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Proffy | Sua plataforma de Estudos Online</title>
+
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/partials/give-classes.css" />
+    <link rel="stylesheet" href="/styles/partials/forms.css" />
+    <link rel="stylesheet" href="/styles/partials/header.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body id="give-classes">
+    <div id="container">
+      <header class="page-header">
+        <div class="top-bar-container">
+          <!-- Botão de voltar e LogoMarca -->
+          <a href="/"><img src="/images/icons/back.svg" alt="Voltar" /></a>
+          <img src="/images/logo.svg" alt="Logomarca" />
+        </div>
+
+        <!-- Div contendo todos as opções -->
+        <div class="header-content">
+          <strong>Que incrível que você quer dar aulas</strong>
+          <p>O primeiro passo é preencher esse formulário de inscrição.</p>
+        </div>
+      </header>
+
+      <main>
+        <form action="" id="create-class">
+          <fieldset>
+            <legend>Seus dados</legend>
+
+            <div class="input-block">
+              <label for="name">Nome Completo</label>
+              <input name="name" id="name" required />
+            </div>
+
+            <div class="input-block">
+              <label for="avatar"
+                >Link da sua foto <small>(comece com https://)</small></label
+              >
+              <input type="url" name="avatar" id="avatar" required />
+            </div>
+
+            <div class="input-block">
+              <label for="whatsapp"
+                >Whatsapp <small>(somente números)</small></label
+              >
+              <input type="number" name="whatsapp" id="whatsapp" />
+            </div>
+
+            <div class="textarea-block">
+              <label for="bio">Biografia</label>
+              <textarea name="bio" id="bio" required></textarea>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Sobre a aula</legend>
+            <div class="select-block">
+              <label for="subject">Matéria</label>
+              <select name="subject" id="subject" required>
+                <option value="">Selecione uma opção</option>
+                <option value="1">Artes</option>
+                <option value="2">Biologia</option>
+                <option value="3">Ciências</option>
+                <option value="4">Educação física</option>
+                <option value="5">Física</option>
+                <option value="6">Geografia</option>
+                <option value="7">História</option>
+                <option value="8">Matemática</option>
+                <option value="9">Português</option>
+                <option value="10">Química</option>
+              </select>
+            </div>
+
+            <div>
+              <div class="input-block">
+                <label for="cost"
+                  >Custo da sua hora/aula <small>(R$)</small></label
+                >
+                <input type="number" name="cost" id="cost" />
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>
