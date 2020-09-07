@@ -10,7 +10,7 @@
   margin: 0 auto;
 
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
 
   padding: 1.6rem 0;
@@ -18,17 +18,23 @@
 
 /* Especificação da imagem do back */
 .page-header .top-bar-container a {
-  height: 3.2rem;
+  height: 2rem;
+  transition: opacity 0.2s;
+}
+/* Especificação da imagem do back */
+.page-header .top-bar-container a img {
+  height: 3.5rem;
   transition: opacity 0.2s;
 }
 /* Especificação da imagem do back quando tiver com o mouse em cima */
-.page-header .top-bar-container a:hover {
-  height: 0.6rem;
-}
+/* .page-header .top-bar-container a:hover { */
+  /* height: 0.6rem; */
+  
+/* } */
 
 /* Especificação da imagem do proffy */
 .page-header .top-bar-container > img {
-  height: 1.6rem;
+  height: 3rem;
 }
 
 .page-header .header-content {

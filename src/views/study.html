@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Proffy | Sua plataforma de Estudos Online</title>
-
+    
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
     <link rel="stylesheet" href="/styles/main.css" />
     <link rel="stylesheet" href="/styles/partials/page-study.css" />
     <link rel="stylesheet" href="/styles/partials/forms.css" />
@@ -18,7 +19,9 @@
 
   <body id="page-study">
     <div id="container">
+
       <header class="page-header">
+
         <div class="top-bar-container">
           <!-- Botão de voltar e LogoMarca -->
           <a href="/"><img src="/images/icons/back.svg" alt="Voltar" /></a>
@@ -27,8 +30,11 @@
 
         <!-- Div contendo todos as opções -->
         <div class="header-content">
+
           <strong>Esses são os proffys disponíveis</strong>
+
           <form id="search-teachers">
+
             <div class="select-block">
               <label for="subject">Matéria</label>
               <!-- O for procura o campo com o nome informado -->
@@ -52,13 +58,16 @@
                 {%endfor%}
               </select>
             </div>
+
             <div class="input-block">
               <label for="time">Hora</label>
               <input name="time" id="time" type="time" value="{{filters.time}}"/>
               <!-- Existem vários types, number, text, time... -->
             </div>
+
             <button type="submit">Filtrar</button>
             <!-- Butão do type="submit", envia o formulário -->
+
           </form>
         </div>
       </header>
